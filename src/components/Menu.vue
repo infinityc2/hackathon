@@ -5,6 +5,8 @@
       <span class="title ml-3 mr-5">
         ระบบขอเอกสารยืนยันตัวตนออนไลน์
       </span>
+      <v-spacer></v-spacer>
+      <v-btn text color="primary" link to="reader">Low Secure</v-btn>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" app clipped color="grey lighten-4">
