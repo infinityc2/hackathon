@@ -12,39 +12,45 @@
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="primary" v-on:click="qrCode">ยืนยัน</v-btn>
+            <!-- <v-btn color="primary" v-on:click="qrCode">ยืนยัน</v-btn> -->
+            <Dialog :dialog="dialog" @QRCode="qrCode"/>
           </v-card-actions>
         </v-card>
       </v-col>
     </v-row>
     <v-row align="center" justify="center">
-      <img :src="qr">
+      <img :src="qr" />
     </v-row>
   </v-container>
 </template>
 <script>
-  import qrcode from 'qrcode'
-  var CryptoJS = require("crypto-js");
-  export default {
-    data: () => ({
-      idCard: '',
-      departmentId: '',
-      qr: ''
-    }),
-    methods: {
-      qrCode: async function () {
-        const _skey = 'hackathonsec';
-        const data = {
-          idCard: this.idCard,
-          departmentId: this.departmentId
-        };
-        const ciphertext = CryptoJS.AES.encrypt(JSON.stringify(data), _skey);
-        // eslint-disable-next-line
-        console.log(ciphertext.toString());
-        this.qr = await qrcode.toDataURL(ciphertext.toString());
-        // eslint-disable-next-line
-        console.log(this.qr)
-      }
+import Dialog from './Dialog'
+import qrcode from "qrcode";
+var CryptoJS = require("crypto-js");
+export default {
+  components: {
+    Dialog
+  },
+  data: () => ({
+    idCard: "",
+    departmentId: "",
+    qr: "",
+    dialog: null
+  }),
+  methods: {
+    qrCode: async function() {
+      const _skey = "hackathonsec";
+      const data = {
+        idCard: this.idCard,
+        departmentId: this.departmentId
+      };
+      const ciphertext = CryptoJS.AES.encrypt(JSON.stringify(data), _skey);
+      // eslint-disable-next-line
+      console.log(ciphertext.toString());
+      this.qr = await qrcode.toDataURL(ciphertext.toString());
+      // eslint-disable-next-line
+      console.log(this.qr);
     }
   }
+};
 </script>

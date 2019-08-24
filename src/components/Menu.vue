@@ -6,7 +6,6 @@
         ระบบขอเอกสารยืนยันตัวตนออนไลน์
       </span>
       <v-spacer></v-spacer>
-      <v-btn text color="primary" link to="reader">Low Secure</v-btn>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" app clipped color="grey lighten-4">
@@ -49,6 +48,15 @@
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="grey--text">ออกจากระบบ</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item link to="reader">
+          <v-list-item-action>
+            <v-icon></v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title class="grey--text"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
