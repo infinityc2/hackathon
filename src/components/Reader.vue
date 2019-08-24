@@ -1,6 +1,7 @@
 <template>
     <div>
         <p class="error">{{ error }}</p>
+        <p>Raw data: {{ raw }}</p>
         <p class="decode-result">Last result: <b>{{ result }}</b></p>
         <qrcode-stream @decode="onDecode" @init="onInit" />
     </div>
@@ -14,11 +15,13 @@
         data :() => {
             return {
                 result: '',
-                error: ''
+                error: '',
+                raw: ''
             }
         },
         methods: {
             onDecode (result) {
+                this.raw = result
                 const _skey = 'hackathonsec';
                 const bytes = CryptoJS.AES.decrypt(result, _skey);
                 this.result = bytes.toString(CryptoJS.enc.Utf8);
