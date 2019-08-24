@@ -6,15 +6,15 @@
           <v-col cols="12" sm="8" md="5">
             <v-card class="elevation-12">
               <v-toolbar color="primary" dark flat>
-                <v-toolbar-title>Identify</v-toolbar-title>
+                <v-toolbar-title>ระบบขอเอกสารยืนยันตัวตนออนไลน์</v-toolbar-title>
               </v-toolbar>
               <v-card-text>
                 <v-form>
-                  <v-text-field label="Login" name="login" prepend-icon="person" type="text"></v-text-field>
+                  <v-text-field label="เลขบัตรประชาชน" name="login" prepend-icon="person" type="text"></v-text-field>
 
                   <v-text-field
                     id="password"
-                    label="Password"
+                    label="รหัสผ่าน"
                     name="password"
                     prepend-icon="lock"
                     type="password"
@@ -22,9 +22,9 @@
                 </v-form>
               </v-card-text>
               <v-card-actions>
-                <v-btn text replace to="/register">Register</v-btn>
+                <v-btn text replace to="/register">สมัคร</v-btn>
                 <v-spacer></v-spacer>
-                <v-btn color="primary" replace to="/menu">Login</v-btn>
+                <v-btn color="primary" replace to="/menu">เข้าสู่ระบบ</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>

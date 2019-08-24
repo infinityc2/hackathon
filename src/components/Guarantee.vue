@@ -3,11 +3,11 @@
     <v-row align="center" justify="center">
       <v-col cols="12" sm="8" md="8" xl="8">
         <v-card>
-          <v-card-title class="display-1">ค้ำประกัน</v-card-title>
+          <v-card-title class="display-1">ขอเอกสารยืนยันตัวตนผู้ค้ำประกัน</v-card-title>
           <v-card-text>
             <v-form>
-              <v-text-field label="ID CARD" v-model="idCard"></v-text-field>
-              <v-text-field label="ID หน่วยงาน" v-model="departmentId"></v-text-field>
+              <v-text-field label="เลขบัตรประชาชนผู้ค้ำประกัน" v-model="idCard"></v-text-field>
+              <v-text-field label="เลขประจำหน่วยงาน" v-model="departmentId"></v-text-field>
             </v-form>
           </v-card-text>
           <v-card-actions>

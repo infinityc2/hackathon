@@ -3,8 +3,7 @@
     <v-app-bar app clipped-left color="primary">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <span class="title ml-3 mr-5">
-        Personal&nbsp;
-        <span class="font-weight-light">Identify</span>
+        ระบบขอเอกสารยืนยันตัวตนออนไลน์
       </span>
     </v-app-bar>
 
@@ -13,13 +12,13 @@
         <v-list-item>
           <v-list-item-action>
             <v-list-item-avatar>
-              <v-avatar>
+              <v-avatar size="30">
                 <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
               </v-avatar>
             </v-list-item-avatar>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="title">Profile</v-list-item-title>
+            <v-list-item-title class="subtitle-1">NAME</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-divider></v-divider>
@@ -29,7 +28,7 @@
             <v-icon>assignment</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="grey--text">ค้ำประกัน</v-list-item-title>
+            <v-list-item-title class="grey--text">ขอเอกสารยืนยันผู้ค้ำประกัน</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
 
@@ -38,7 +37,7 @@
             <v-icon>assignment_ind</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="grey--text">มอบฉันทะ</v-list-item-title>
+            <v-list-item-title class="grey--text">ขอเอกสารมอบฉันทะ</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-divider class="mt-3"></v-divider>

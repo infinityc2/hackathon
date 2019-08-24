@@ -6,38 +6,38 @@
           <v-col cols="12" sm="8" md="6">
             <v-card class="elevation-12">
               <v-toolbar color="primary" dark flat>
-                <v-toolbar-title>Register</v-toolbar-title>
+                <v-toolbar-title>สมัคร</v-toolbar-title>
               </v-toolbar>
               <v-card-text>
                 <v-form>
-                  <v-file-input label="Image"></v-file-input>
-                  <v-text-field label="ID Card" prepend-icon="person" type="text"></v-text-field>
+                  <v-file-input label="เพิ่มรูปภาพ"></v-file-input>
+                  <v-text-field label="เลขบัตรประชาชน" prepend-icon="person" type="text"></v-text-field>
 
                   <v-text-field
                     id="password"
-                    label="Password"
+                    label="รหัสผ่าน"
                     name="password"
                     prepend-icon="lock"
                     type="password"
                   ></v-text-field>
                   <v-text-field label="PIN"></v-text-field>
-                  <v-text-field label="ID Card Identify"></v-text-field>
-                  <v-text-field label="Email" type="email"></v-text-field>
-                  <v-select label="Prefix" :items="prefix"></v-select>
+                  <v-text-field label="เลขหลังบัตรประชาชน"></v-text-field>
+                  <v-text-field label="อีเมล" type="email"></v-text-field>
+                  <v-select label="คำนำหน้า" :items="prefix"></v-select>
                   <v-row>
                     <v-col cols="12" md="6">
-                      <v-text-field label="Name (thai)"></v-text-field>
+                      <v-text-field label="ชื่อ"></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6">
-                      <v-text-field label="Surname (thai)"></v-text-field>
+                      <v-text-field label="นามสกุล"></v-text-field>
                     </v-col>
                   </v-row>
                   <v-row>
                     <v-col cols="12" md="6">
-                      <v-text-field label="Name (Eng)"></v-text-field>
+                      <v-text-field label="Firstname"></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6">
-                      <v-text-field label="Surname (Eng)"></v-text-field>
+                      <v-text-field label="Lastname"></v-text-field>
                     </v-col>
                   </v-row>
                   <v-menu
@@ -53,7 +53,7 @@
                     <template v-slot:activator="{ on }">
                       <v-text-field
                         v-model="date"
-                        label="Birthdate"
+                        label="วันเกิด"
                         prepend-icon="event"
                         readonly
                         v-on="on"
@@ -66,14 +66,14 @@
                     </v-date-picker>
                   </v-menu>
 
-                  <v-text-field label="religion"></v-text-field>
-                  <v-textarea label="Addresss"></v-textarea>
+                  <v-text-field label="ศาสนา"></v-text-field>
+                  <v-textarea label="ที่อยู่"></v-textarea>
                 </v-form>
               </v-card-text>
               <v-card-actions>
-                  <v-btn text link to="/login">Back</v-btn>
+                  <v-btn text link to="/login">กลับ</v-btn>
                 <v-spacer></v-spacer>
-                <v-btn color="primary" to="/login" link>Register</v-btn>
+                <v-btn color="primary" to="/login" link>สมัคร</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>

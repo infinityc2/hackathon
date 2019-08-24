@@ -3,11 +3,11 @@
     <v-row align="center" justify="center">
       <v-col cols="12" sm="8" md="8" xl="8">
         <v-card>
-          <v-card-title class="display-1">มอบฉันทะ</v-card-title>
+          <v-card-title class="display-1">ขอเอกสารมอบฉันทะ</v-card-title>
           <v-card-text>
             <v-form>
-              <v-text-field label="ID ผู้รับฉันทะ" v-model="idCard"></v-text-field>
-              <v-text-field label="ชื่อผู้รับฉันทะ" v-model="name"></v-text-field>
+              <v-text-field label="เลขบัตรประชาชนผู้รับฉันทะ" v-model="idCard"></v-text-field>
+              <v-text-field label="ชื่อผู้รับมอบฉันทะ" v-model="name"></v-text-field>
             </v-form>
           </v-card-text>
           <v-card-actions>
