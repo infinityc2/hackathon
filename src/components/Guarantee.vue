@@ -3,7 +3,7 @@
     <v-row align="center" justify="center">
       <v-col cols="12" sm="8" md="8" xl="8">
         <v-card>
-          <v-card-title>ค้ำประกัน</v-card-title>
+          <v-card-title class="display-1">ค้ำประกัน</v-card-title>
           <v-card-text>
             <v-form>
               <v-text-field label="ID CARD" v-model="idCard"></v-text-field>

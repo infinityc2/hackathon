@@ -10,9 +10,23 @@
 
     <v-navigation-drawer v-model="drawer" app clipped color="grey lighten-4">
       <v-list dense class="grey lighten-4">
+        <v-list-item>
+          <v-list-item-action>
+            <v-list-item-avatar>
+              <v-avatar>
+                <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
+              </v-avatar>
+            </v-list-item-avatar>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title class="title">Profile</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider></v-divider>
+
         <v-list-item link to="guarantee">
           <v-list-item-action>
-            <v-icon></v-icon>
+            <v-icon>assignment</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="grey--text">ค้ำประกัน</v-list-item-title>
@@ -21,7 +35,7 @@
 
         <v-list-item link to="authorize">
           <v-list-item-action>
-            <v-icon></v-icon>
+            <v-icon>assignment_ind</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="grey--text">มอบฉันทะ</v-list-item-title>
@@ -30,7 +44,7 @@
         <v-divider class="mt-3"></v-divider>
         <v-list-item link to="/login">
           <v-list-item-action>
-            <v-icon></v-icon>
+            <v-icon>clear</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="grey--text">ออกจากระบบ</v-list-item-title>
