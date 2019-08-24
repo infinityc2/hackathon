@@ -73,7 +73,7 @@
               <v-card-actions>
                   <v-btn text link to="/login">Back</v-btn>
                 <v-spacer></v-spacer>
-                <v-btn color="primary">Register</v-btn>
+                <v-btn color="primary" to="/login" link>Register</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
