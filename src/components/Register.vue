@@ -3,7 +3,7 @@
     <v-content>
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
-          <v-col cols="12" sm="8" md="4">
+          <v-col cols="12" sm="8" md="6">
             <v-card class="elevation-12">
               <v-toolbar color="primary" dark flat>
                 <v-toolbar-title>Register</v-toolbar-title>
@@ -20,11 +20,26 @@
                     prepend-icon="lock"
                     type="password"
                   ></v-text-field>
-
+                  <v-text-field label="PIN"></v-text-field>
+                  <v-text-field label="ID Card Identify"></v-text-field>
                   <v-text-field label="Email" type="email"></v-text-field>
-                  <v-select label="Prefix"></v-select>
-                  <v-text-field label="Name"></v-text-field>
-                  <v-text-field label="Surname"></v-text-field>
+                  <v-select label="Prefix" :items="prefix"></v-select>
+                  <v-row>
+                    <v-col cols="12" md="6">
+                      <v-text-field label="Name (thai)"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                      <v-text-field label="Surname (thai)"></v-text-field>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="12" md="6">
+                      <v-text-field label="Name (Eng)"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                      <v-text-field label="Surname (Eng)"></v-text-field>
+                    </v-col>
+                  </v-row>
                   <v-menu
                     ref="menu"
                     v-model="menu"
@@ -38,7 +53,7 @@
                     <template v-slot:activator="{ on }">
                       <v-text-field
                         v-model="date"
-                        label="Picker in menu"
+                        label="Birthdate"
                         prepend-icon="event"
                         readonly
                         v-on="on"
@@ -53,10 +68,10 @@
 
                   <v-text-field label="religion"></v-text-field>
                   <v-textarea label="Addresss"></v-textarea>
-                  <v-text-field label="ID Card Identify"></v-text-field>
                 </v-form>
               </v-card-text>
               <v-card-actions>
+                  <v-btn text link to="/login">Back</v-btn>
                 <v-spacer></v-spacer>
                 <v-btn color="primary">Register</v-btn>
               </v-card-actions>
@@ -73,7 +88,21 @@
 export default {
   data: () => ({
     date: new Date().toISOString().substr(0, 10),
-    menu: false
+    menu: false,
+    prefix: [
+        {
+            text: 'นาย',
+            value: 1
+        },
+        {
+            text: 'นาง',
+            value: 2
+        },
+        {
+            text: 'นางสาว',
+            value: 3
+        }
+    ]
   })
 };
 </script>

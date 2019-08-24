@@ -40,14 +40,10 @@
     </v-navigation-drawer>
 
     <v-content>
-      <v-container fluid class="grey lighten-4 fill-height">
-        <v-row justify="center" align="center">
-          <v-col class="shrink">
-            <v-fade-transition>
-              <router-view />
-            </v-fade-transition>
-          </v-col>
-        </v-row>
+      <v-container fluid>
+        <v-fade-transition>
+          <router-view />
+        </v-fade-transition>
       </v-container>
     </v-content>
   </v-app>
