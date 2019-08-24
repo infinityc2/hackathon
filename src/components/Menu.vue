@@ -56,7 +56,7 @@
             <v-icon></v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="grey--text"></v-list-item-title>
+            <v-list-item-title class="grey--text">reader</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
