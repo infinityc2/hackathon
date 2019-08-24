@@ -8,6 +8,7 @@ import Authorize from './components/Authorize'
 import Guarantee from './components/Guarantee'
 
 import QRCode from './components/QRCode'
+import Reader from "./components/Reader";
 
 Vue.use(Router)
 
@@ -46,6 +47,10 @@ export default new Router({
         {
           path: 'qrcode',
           component: QRCode
+        },
+        {
+          path: 'reader',
+          component: Reader
         }
       ]
     }

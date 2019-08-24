@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import Vue from "vue";
 import qrcode from 'qrcode'
 
 export default {
@@ -14,8 +13,10 @@ export default {
     message: ""
   }),
   methods: {
-    qrCode: function () {
-      const res = qrcode.toDataURL(this.message).then(res => console.log(res))
+    qrCode: async function () {
+      const res = await qrcode.toDataURL(this.message);
+      // eslint-disable-next-line
+      console.log(res)
     }
   }
 };
