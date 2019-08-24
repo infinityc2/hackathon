@@ -7,6 +7,8 @@ import Menu from './components/Menu'
 import Authorize from './components/Authorize'
 import Guarantee from './components/Guarantee'
 
+import QRCode from './components/QRCode'
+
 Vue.use(Router)
 
 export default new Router({
@@ -40,6 +42,10 @@ export default new Router({
         {
           path: 'authorize',
           component: Authorize
+        },
+        {
+          path: 'qrcode',
+          component: QRCode
         }
       ]
     }
